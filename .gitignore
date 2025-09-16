@@ -18,6 +18,7 @@ yarn-error.log*
 # IDE files
 .vscode/
 .idea/
-
+workspace.code-workspace
 # OS files
 Thumbs.db
+
