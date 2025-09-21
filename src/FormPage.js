@@ -7,7 +7,13 @@ function FormPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/details', { state: { name } });
+    // Get existing users from localStorage
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    // Add new user
+    users.push({ name });
+    // Save back to localStorage
+    localStorage.setItem('users', JSON.stringify(users));
+    navigate('/details');
   };
 
   return (
