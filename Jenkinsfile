@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: "${GIT_CREDENTIALS_ID}", 
+                git branch: 'main',
+                    credentialsId: "${GIT_CREDENTIALS_ID}", 
                     url: 'https://github.com/AbutalhaKothiwale53/SimpleReactApp.git'
             }
         }
