@@ -7,6 +7,7 @@ test("App renders without crashing", () => {
   render(<App />);
 });
 
+// you can uncomment later if needed
 // test("App applies dark theme styles", () => {
 //   window.location.hash = "#/admin";
 //   render(<App />);
