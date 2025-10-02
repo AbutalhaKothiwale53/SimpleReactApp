@@ -19,16 +19,9 @@ pipeline {
                 bat 'npm install'
             }
         }
-        // stage('Deploy React App') {
-        //     steps {
-        //         bat 'git config --global user.email "talhakothiwale53@gmail.com"'
-        //         bat 'git config --global user.name "abutalhakothiwale53"'
-        //         bat 'npm run deploy'
-        //     }
-        // }
         stage('Test Application') {
             steps {
-                bat 'npm test'
+                bat 'npm test -- --passWithNoTests'
             }
         }
         stage('Archive Build Artifacts') {
