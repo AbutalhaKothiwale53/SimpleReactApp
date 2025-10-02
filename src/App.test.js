@@ -1,16 +1,13 @@
-import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 
+// Test 1: App renders without crashing
 test("App renders without crashing", () => {
-  window.location.hash = "#/admin";
   render(<App />);
 });
 
-// you can uncomment later if needed
-// test("App applies dark theme styles", () => {
-//   window.location.hash = "#/admin";
-//   render(<App />);
-//   expect(document.body.style.backgroundColor).toBe("rgb(24, 24, 24)");
-//   expect(document.body.style.color).toBe("rgb(241, 241, 241)");
-// });
+// Test 2: App renders an element with text 'Home'
+test("renders Home text", () => {
+  render(<App />);
+  expect(screen.getByText(/home/i)).toBeInTheDocument();
+});
