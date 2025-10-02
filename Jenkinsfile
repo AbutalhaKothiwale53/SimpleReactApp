@@ -21,6 +21,8 @@ pipeline {
         }
         stage('Deploy React App') {
             steps {
+                bat 'git config --global user.email "talhakothiwale53@gmail.com"'
+                bat 'git config --global user.name "abutalhakothiwale53"'
                 bat 'npm run deploy'
             }
         }
