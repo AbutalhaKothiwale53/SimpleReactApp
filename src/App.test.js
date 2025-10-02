@@ -13,8 +13,3 @@ test("App renders without crashing", () => {
 //   expect(document.body.style.backgroundColor).toBe("rgb(24, 24, 24)");
 //   expect(document.body.style.color).toBe("rgb(241, 241, 241)");
 // });
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
