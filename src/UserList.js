@@ -43,8 +43,7 @@ export default function UserList() {
                       aria-label={`delete-${idx}`}
                       onClick={() => handleDelete(idx)}
                     >
-                      <span aria-hidden="true" style={{ fontSize: '1rem', lineHeight: 1 }}>&times;</span>
-                      <span className="visually-hidden">Delete</span>
+                      <i class="bi bi-trash-fill"></i>
                     </button>
                   </div>
                 </td>
