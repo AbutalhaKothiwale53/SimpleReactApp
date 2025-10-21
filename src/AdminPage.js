@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import UserList from './UserList';
 
 function AdminPage() {
   const [name, setName] = useState('');
@@ -19,27 +20,26 @@ function AdminPage() {
   };
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h2>Admin: Add Names</h2>
-      <form onSubmit={handleAdd} style={{ marginBottom: '1rem' }}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          style={{ padding: '0.5rem', fontSize: '1rem' }}
-        />
-        <button type="submit" style={{ marginLeft: '1rem', padding: '0.5rem 1rem' }}>
-          Add
-        </button>
+    <div className="container" style={{ padding: '1.5rem' }}>
+      <h2 className="text-light">Admin: Add Names</h2>
+      <form onSubmit={handleAdd} className="row g-3 align-items-center mb-4">
+        <div className="col-auto">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="col-auto">
+          <button type="submit" className="btn btn-primary">Add</button>
+        </div>
       </form>
-      <h3>Current Users</h3>
-      <ul>
-        {users.map((user, idx) => (
-          <li key={idx}><strong>Name:</strong> {user.name}</li>
-        ))}
-      </ul>
+
+      <h3 className="text-light">Current Users</h3>
+      <UserList />
     </div>
   );
 }

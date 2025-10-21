@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+// initialize userEvents patch (dispatches usersChanged when localStorage users key is modified)
+import './userEvents';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

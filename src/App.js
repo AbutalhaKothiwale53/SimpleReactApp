@@ -2,44 +2,49 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminPage from './AdminPage';
 import UserPage from './UserPage';
+import FormPage from './FormPage';
+import './App.css';
 
 function App() {
+  const [routesKey, setRoutesKey] = React.useState(0);
+
   React.useEffect(() => {
-    document.body.style.margin = '0';
-    document.body.style.padding = '0';
-    document.body.style.backgroundColor = '#181818';
-    document.body.style.color = '#f1f1f1';
-    document.body.style.overflow = 'hidden';
-    document.body.style.width = '100vw';
-    document.body.style.height = '100vh';
-    document.documentElement.style.height = '100%';
-    document.documentElement.style.width = '100vw';
-    document.documentElement.style.overflow = 'hidden';
-    document.documentElement.style.margin = '0';
-    document.documentElement.style.padding = '0';
+    const onUsersChanged = () => setRoutesKey((k) => k + 1);
+    window.addEventListener('usersChanged', onUsersChanged);
+    return () => window.removeEventListener('usersChanged', onUsersChanged);
   }, []);
-  const darkStyle = {
-    backgroundColor: '#181818',
-    color: '#f1f1f1',
-    minHeight: '100vh',
-    height: '100vh',
-    width: '100vw',
-    fontFamily: 'Segoe UI, Arial, sans-serif',
-    margin: 0,
-    padding: 0,
-    overflow: 'hidden',
-    boxSizing: 'border-box',
-    position: 'fixed',
-    top: 0,
-    left: 0
-  };
+
   return (
-    <div style={darkStyle}>
+    <div className="app-root">
       <Router>
-        <Routes>
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/user" element={<UserPage />} />
-        </Routes>
+        <nav className="navbar navbar-expand-lg navbar-dark position-relative" style={{ backgroundColor: '#121212' }}>
+          <div className="container-fluid">
+            <a className="navbar-brand navbar-centered-brand" href="#/admin">Simple React App</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="#/admin">Admin</a>
+                </li>
+                {/* <li className="nav-item">
+                  <a className="nav-link" href="#/form">Form</a>
+                </li> */}
+                <li className="nav-item">
+                  <a className="nav-link" href="#/user">User</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div className="container-fluid app-content">
+          <Routes key={routesKey}>
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/form" element={<FormPage />} />
+            <Route path="/user" element={<UserPage />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );
