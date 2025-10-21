@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Test Application') {
             steps {
-                bat 'npm test --passWithNoTests'
+                bat 'npm test -- --passWithNoTests'
             }
         }
         stage('Archive Build Artifacts') {
