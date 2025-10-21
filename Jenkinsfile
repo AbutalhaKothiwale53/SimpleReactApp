@@ -19,6 +19,11 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('Build Application') {
+            steps {
+                bat 'npm run build'
+            }
+        }
         stage('Test Application') {
             steps {
                 bat 'npm test -- --passWithNoTests'
