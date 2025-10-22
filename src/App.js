@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="app-root">
       <Router>
-        <nav className="navbar navbar-expand-lg navbar-dark position-relative" style={{ backgroundColor: '#121212' }}>
+        <nav className="navbar navbar-expand-lg navbar-dark position-relative" style={{ backgroundColor: '#195700' }}>
           <div className="container-fluid">
             <a className="navbar-brand navbar-centered-brand" href="#/admin">Simple React App</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +26,13 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#/admin">Admin</a>
+                  <strong><a className="nav-link" href="#/admin">Admin</a></strong>
                 </li>
                 {/* <li className="nav-item">
                   <a className="nav-link" href="#/form">Form</a>
                 </li> */}
                 <li className="nav-item">
-                  <a className="nav-link" href="#/user">User</a>
+                  <strong><a className="nav-link" href="#/user">User</a></strong>
                 </li>
               </ul>
             </div>

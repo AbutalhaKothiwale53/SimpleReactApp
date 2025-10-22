@@ -43,7 +43,7 @@ export default function UserList() {
                       aria-label={`delete-${idx}`}
                       onClick={() => handleDelete(idx)}
                     >
-                      <i class="bi bi-trash-fill"></i>
+                      <i class="bi bi-trash-fill text-danger"></i>
                     </button>
                   </div>
                 </td>

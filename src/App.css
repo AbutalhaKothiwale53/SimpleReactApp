@@ -37,3 +37,23 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.navbar-nav .nav-link {
+  color: #181818 !important;
+}
+
+/* ensure hover/focus remain visible */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* keep the brand styling separate (if needed) */
+.navbar .navbar-brand {
+  color: inherit;
+}
+
+/* optional: ensure strong wrapper doesn't override color */
+.navbar-nav strong .nav-link {
+  color: #212121 !important;
+}
