@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SimpleReactApp/static/css/main.ca0a8721.css",
+    "main.css": "/SimpleReactApp/static/css/main.d8950175.css",
     "main.js": "/SimpleReactApp/static/js/main.64e74aa1.js",
     "static/media/bootstrap-icons.woff?": "/SimpleReactApp/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/SimpleReactApp/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "index.html": "/SimpleReactApp/index.html",
-    "main.ca0a8721.css.map": "/SimpleReactApp/static/css/main.ca0a8721.css.map",
+    "main.d8950175.css.map": "/SimpleReactApp/static/css/main.d8950175.css.map",
     "main.64e74aa1.js.map": "/SimpleReactApp/static/js/main.64e74aa1.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca0a8721.css",
+    "static/css/main.d8950175.css",
     "static/js/main.64e74aa1.js"
   ]
 }
