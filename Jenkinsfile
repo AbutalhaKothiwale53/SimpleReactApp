@@ -37,7 +37,6 @@ pipeline {
         stage('Deploy to GitHub Pages') {
             steps {
                 bat 'npm run deploy'
-                }
             }
         }
     }
